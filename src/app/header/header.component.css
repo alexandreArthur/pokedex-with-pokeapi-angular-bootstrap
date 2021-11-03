@@ -1,0 +1,29 @@
+.container-fluid{
+    padding: 0;
+}
+#nav-container{
+    background-color: rgb(42, 54, 165);
+}
+#nav-container img{
+    margin-left: 5%;
+    width: 150px;
+}
+.navbar-toggler{
+    margin-right: 5%;
+}
+#navbar-links{
+    margin-right: 5%;
+}
+.navbar-nav a{
+    margin: 0 5px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .5s;
+}
+.navbar-nav a:hover{
+    color: yellow;
+}
+.navbar-expand-lg .navbar-nav .nav-link{
+    padding: 1rem .8rem;
+}
