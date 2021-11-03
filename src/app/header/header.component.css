@@ -15,14 +15,19 @@
     margin-right: 5%;
 }
 .navbar-nav a{
-    margin: 0 5px;
+    font-size: large;
+    margin: 5px;
     color: white;
     text-decoration: none;
     text-transform: uppercase;
-    transition: .5s;
+    text-align: center;
+    
 }
-.navbar-nav a:hover{
-    color: yellow;
+.navbar-nav a p:hover{
+    color: rgb(42, 54, 165);
+    background-color: yellow;
+    border: 3px solid yellow;
+    border-radius: 10px;
 }
 .navbar-expand-lg .navbar-nav .nav-link{
     padding: 1rem .8rem;
