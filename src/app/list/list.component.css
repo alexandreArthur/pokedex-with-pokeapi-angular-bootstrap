@@ -1,4 +1,10 @@
-.pokedex-main{
-    text-align: center;
-    margin-top: 5%;
+#search-bar{
+    margin-top: 2%;
+    width: 40vh;
+}
+#search-addon{
+    transition: .5s;
+}
+#search-addon:hover{
+    background-color: yellow
 }
