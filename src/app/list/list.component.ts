@@ -1,3 +1,4 @@
+import { pokedexService } from './../services/pokedex.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListComponent implements OnInit {
 
-  constructor() { }
+  pokemons: any[]= [];
+  abilities: any[] = [];
+
+  constructor(private pokeService: pokedexService) { }
 
   ngOnInit(): void {
+
   }
+
 
 }
