@@ -1,10 +1,10 @@
 import { DetailsComponent } from './details/details.component';
-import { ListComponent } from './list/list.component';
+import { searchComponent } from './search/search.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  {path: '', component:ListComponent},
+  {path: '', component:searchComponent},
   {path: 'details', component: DetailsComponent}
 ];
 
