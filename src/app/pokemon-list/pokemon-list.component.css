@@ -1,0 +1,50 @@
+.row{
+    margin: 0;
+}
+.container {
+    padding: 70px 0;
+}
+.col-sm-6{ 
+}
+.pokemon-details{
+    text-decoration: none;
+    color: black;
+}
+.card{
+    border: none;
+}
+.card-body{
+    height: 350px;
+    text-align: center;
+    background-color: rgba(1, 1, 1, 0.068);
+}
+.card-body:hover{
+    border: 6px solid transparent;
+    border-radius: 10px;
+}
+.card-img-top{
+    height: 50%;
+    width: 50%;
+}
+.pokemon-type{
+    list-style-type: none;
+    text-align: left;
+    color: black;
+}
+.pokemon-type li{
+    width: 90%;
+    margin-top: 5%;
+    font-weight: 500;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.068);
+    border: 2px solid black;
+    border-radius: 10px;
+}
+.btn{
+    border: 2px solid blue;
+    transition: .5s;
+    text-transform: uppercase;
+}
+.btn:hover{
+    background-color: yellow;
+}
