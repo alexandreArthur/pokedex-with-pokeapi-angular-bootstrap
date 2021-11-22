@@ -1,8 +1,10 @@
+<poke-search (emmitSearch)="dynamicSearch($event)"></poke-search>
+
 <div class="container">
     <div class="row">
         <div class="col-sm-6"  *ngFor="let pokemon of getAllPokemons">
             <div class="card" *ngIf="pokemon.status">
-                <a href="#" class="pokemon-details">
+                <a [routerLink]="['details', pokemon.status.id]" class="pokemon-details">
                     <div class="card-body">
                         <img class="card-img-top" [src]="pokemon.status.sprites.other.dream_world.front_default" [alt]="pokemon.name">
                         <h5 class="card-title">{{pokemon.name}}</h5>
