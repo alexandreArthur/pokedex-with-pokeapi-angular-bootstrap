@@ -1,26 +1,36 @@
 <poke-search></poke-search>
 <main>
-    <div class="container-fluid mt-3">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card mb-3">
-                    <img class="card-img-top" [src]="pokemon[0].sprites.other.dream_world.front_default" [alt]="pokemon.name">
-                    <div class="card-body text-center">
-                      <h5 class="card-title mt-1">{{pokemon[0].name}}</h5>
-                      <h6 class="card-title">{{pokemon[1].names[0].name}}</h6>
+    <ng-template [ngIf]="isLoading">
+        <div class="container-fluid mt-3">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="card mb-3">
+                        <img class="card-img-top" [src]="pokemon[0].sprites.other.dream_world.front_default" [alt]="pokemon.name">
+                        <div class="card-body text-center">
+                        <h5 class="card-title mt-1">{{pokemon[0].name}}</h5>
+                        <h6 class="card-title">{{pokemon[1].names[0].name}}</h6>
 
-                        <p class="card-text" *ngFor="let value of pokemon[0].stats">
-                            {{value.stat.name}}
-                            <strong>
-                                {{value.base_stat}}
-                            </strong>
-                        </p>    
-                        <p class="card-text">
-                            <a [routerLink]="['']" class="btn px-5">Voltar</a>
-                        </p>
+                            <p class="card-text" *ngFor="let value of pokemon[0].stats">
+                                {{value.stat.name}}
+                                <strong>
+                                    {{value.base_stat}}
+                                </strong>
+                            </p>    
+                            <p class="card-text">
+                                <a [routerLink]="['']" class="btn px-5">Voltar</a>
+                            </p>
+                        </div>
                     </div>
-                  </div>
+                </div>
             </div>
         </div>
-    </div>
+    </ng-template>
+    
+     <img 
+         class="error mt-4"
+         src="..\assets\error.png" 
+         alt="Erro no carregamento de dados."
+         width="100%"
+         *ngIf="errorLoading"
+     >
 </main>

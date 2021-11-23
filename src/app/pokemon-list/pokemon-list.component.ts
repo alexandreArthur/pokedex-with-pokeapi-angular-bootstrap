@@ -10,6 +10,8 @@ export class PokemonListComponent implements OnInit {
 
   private setAllPokemons: any;
   public getAllPokemons: any;
+  public isLoading: boolean = false;
+  public errorLoading: boolean = false;
 
   constructor(private pokeService: pokedexService) { }
 
@@ -18,7 +20,12 @@ export class PokemonListComponent implements OnInit {
       res=>{
         this.setAllPokemons = res.results;
         this.getAllPokemons = this.setAllPokemons;
-      } 
+        this.isLoading = true;
+      },
+      error =>{
+        this.errorLoading = true;
+
+      }
     );
   }
 
@@ -28,7 +35,6 @@ export class PokemonListComponent implements OnInit {
         return !res.name.indexOf(value.toLowerCase());
       },
       (error: any)=>{
-        console.log(error);
       });
       this.getAllPokemons = filter;
   }
